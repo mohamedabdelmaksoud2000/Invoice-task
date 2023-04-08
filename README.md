@@ -4,18 +4,15 @@
 
 Write a program that can price a cart of products from different countries, accept multiple products, combine offers, and display a total detailed invoice in USD as well.
 
+# Description of solution
+
+I used SOLID principles and cleen code in writing a program , In terms of security, it has no any any obvious vulnerability ,
+
 ## Design Patterns used are.
 
 - **Repository Design Pattern**
 - **Builder Design Pattern**
 - **Facade Design Pattern**
-
-
-### why i use Repository Design Pattern 
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
 ### why i use Repository Design Pattern 
 
