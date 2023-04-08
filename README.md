@@ -14,7 +14,71 @@ I used SOLID principles and cleen code in writing a program , In terms of securi
 - **Builder Design Pattern**
 - **Facade Design Pattern**
 
-### why i use Repository Design Pattern 
+## Packages used are.
+
+- **livewire**
+- **laratrust**
+- **toastr**
+- **Pest-test**
+
+
+
+## Install
+
+install the program using git
+
+```sh
+git clone https://github.com/mohamedabdelmaksoud2000/Invoice-task
+```
+
+```sh
+cd invoice-task
+```
+
+install packages and vendor using composer
+
+```sh
+comoser update or comoser install
+```
+
+install packages and vendor using composer
+
+```sh
+comoser update or comoser install
+```
+
+create env file
+
+```sh
+cp .env.example .env
+```
+
+```sh
+Set up .env file
+```
+
+generate key
+
+```sh
+php artisan key:generate
+```
+
+create tables in database
+```sh
+ php artisan migrate
+``` 
+
+create data in database
+```sh
+ php artisan db:seed
+``` 
+
+run project
+```sh
+ php artisan serve
+``` 
+(https://patreon.com/taylorotwell)
+
 
 We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
