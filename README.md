@@ -23,7 +23,7 @@ I used SOLID principles and cleen code in writing a program , In terms of securi
 
 # database
 
-<img src="database.jpeg">
+<img src="database.jpg">
 
 
 ## Install
