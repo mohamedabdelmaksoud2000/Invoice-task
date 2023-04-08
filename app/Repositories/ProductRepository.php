@@ -17,7 +17,13 @@ class ProductRepository implements ProductRepositoryInterface
     }
     public function deleteProduct($productId) 
     {
-        Product::destroy($productId);
+        $product = $this->getProductById($productId);
+        if(count($product->offers) > 0)
+        {
+            return false ;
+        }
+        $product->destroy($productId);
+        return true ;
     }
 
     public function createProduct(array $productDetails) 

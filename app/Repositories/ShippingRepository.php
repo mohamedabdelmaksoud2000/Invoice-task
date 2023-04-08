@@ -18,7 +18,13 @@ class ShippingRepository implements ShippingRepositoryInterface
     }
     public function deleteShipping($shippingId)
     {
-        return Shipping::destroy($shippingId);
+        $shipping = $this->getShippingById($shipping);
+        if(count($shipping->products) > 0)
+        {
+            return false ;
+        }
+        Shipping::destroy($shippingId);
+        return true;
     }
     public function createShipping(array $shippingDetails)
     {

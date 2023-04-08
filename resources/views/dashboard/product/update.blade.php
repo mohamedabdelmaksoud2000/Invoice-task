@@ -18,11 +18,11 @@
                             </ul>
                         </div>
                     @endif
-                    <form method="POST" action="{{ route('product.update',$product->id)}}" >
+                    <form class="row" method="POST" action="{{ route('product.update',$product->id)}}" >
                         @method('PUT')
                         @csrf
                         <input type="text" name="id" value="{{ $product->id }}" class="d-none">
-                        <div class="form-row">
+                        <div class="form-row row">
                             <div class="form-group col-md-6">
                                 <label for="type">Item type</label>
                                 <input type="text" class="form-control" id="type" name="type" placeholder="Item type" value="{{ $product->type }}">
@@ -37,7 +37,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-row">
+                        <div class="form-row row">
                             <div class="form-group col-md-6">
                                 <label for="price">Item price</label>
                                 <input type="text" class="form-control" id="price" name="price" placeholder="Item price" value="{{ $product->price }}">
@@ -47,7 +47,7 @@
                                 <input type="text" class="form-control" id="Weight" name="weight" placeholder="Weight" value="{{ $product->weight }}">
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="background-color:#007bff;margin:auto">Update</button>
+                        <button type="submit" class="btn btn-primary" style="background-color:#007bff;margin:auto;margin-top:10px">Update</button>
                     </form>
                 </div>
             </div>

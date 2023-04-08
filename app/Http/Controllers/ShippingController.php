@@ -52,11 +52,7 @@ class ShippingController extends Controller
 
     public function update(UpdateShippingRequest $request, $shippingId)
     {
-        $data = $request->only([
-            'country',
-            'rate'
-        ]);
-        $this->shippingRepository->updateShipping($shippingId,$data);
+        $this->shippingRepository->updateShipping($shippingId,$request->all());
         toastr()->success('Update Shipping Successfully');
         return redirect()->route('shipping.index');
     }
@@ -64,15 +60,14 @@ class ShippingController extends Controller
 
     public function destroy($id)
     {
-        $shipping = $this->shippingRepository->getShippingById($id);
+        $checkdelete = $this->shippingRepository->deleteShipping($id);
         
-        if($shipping->products->count() > 0)
+        if($checkdelete)
         {
-            toastr()->error("you can't delete shipping becouase it contain products");
+            toastr()->success('delete shipping Successfully');
         }else
         {
-            $this->shippingRepository->deleteShipping($id);
-            toastr()->success('delete shipping Successfully');
+            toastr()->error("you can't delete shipping becouase it contain products");
         }
         return redirect()->route('shipping.index');
     }

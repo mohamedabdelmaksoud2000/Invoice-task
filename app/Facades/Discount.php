@@ -11,13 +11,12 @@ class Discount
     public function getDiscount($products)
     {
         $this->products = $products;
-
         $discountDefault= [0 =>[
             'title'=>'not found discount',
             'discount'=> 0 
             ]
         ];
-
+        
         $discountProducts = $this->getDiscountProducts();
         $discountShipping = $this->getDiscountShipping();
         array_push($discountProducts , $discountShipping);     

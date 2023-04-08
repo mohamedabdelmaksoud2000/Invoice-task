@@ -34,13 +34,7 @@ class ProductController extends Controller
     public function store(StoreProductRequest $request)
     {
 
-        $data = $request->only([
-            'type',
-            'shipping_id',
-            'price',
-            'weight',
-        ]);
-        $this->productRepository->createProduct($data);
+        $this->productRepository->createProduct($request->all());
         toastr()->success('create Product Successfully');
         return redirect()->route('dashboard');
     }
@@ -58,17 +52,7 @@ class ProductController extends Controller
     public function update(UpdateProductRequest $request , $id)
     {
 
-        $newData = $request->only([
-            'type',
-            'country',
-            'price',
-            'weight',
-            'rate',
-            'shipping',
-            'vat'
-        ]);
-
-        $this->productRepository->updateProduct($id,$newData);
+        $this->productRepository->updateProduct($id,$request->all());
         toastr()->success('update Product Successfully');
         return redirect()->route('dashboard');
 
@@ -77,8 +61,14 @@ class ProductController extends Controller
     public function destroy($id)
     {
 
-        $this->productRepository->deleteProduct($id);
-        toastr()->success('delete Product Successfully');
+        $chack=$this->productRepository->deleteProduct($id);
+        if($chack)
+        {
+            toastr()->success('delete Product Successfully');
+        }else
+        {
+            toastr()->error('product contains offers');
+        }
         return redirect()->route('dashboard');
     }
 }

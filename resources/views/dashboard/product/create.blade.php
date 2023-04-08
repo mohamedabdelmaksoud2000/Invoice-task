@@ -18,9 +18,9 @@
                             </ul>
                         </div>
                     @endif
-                    <form method="POST" action="{{ route('product.store')}}" >
+                    <form class="row" method="POST" action="{{ route('product.store')}}" >
                         @csrf
-                        <div class="form-row">
+                        <div class="form-row row">
                             <div class="form-group col-md-6">
                                 <label for="type">Item type</label>
                                 <input type="text" class="form-control" id="type" name="type" placeholder="Item type">
@@ -35,7 +35,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-row">
+                        <div class="form-row row">
                             <div class="form-group col-md-6">
                                 <label for="price">Item price</label>
                                 <input type="text" class="form-control" id="price" name="price" placeholder="Item price">
@@ -45,7 +45,7 @@
                                 <input type="text" class="form-control" id="Weight" name="weight" placeholder="Weight">
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="background-color:#007bff;margin:auto">Create</button>
+                        <button type="submit" class="btn btn-primary m-10" style="background-color:#007bff;margin:auto;margin-top: 10px;">Create</button>
                     </form>
                 </div>
             </div>

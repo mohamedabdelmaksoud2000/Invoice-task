@@ -32,15 +32,7 @@ class OfferController extends Controller
 
     public function store(StoreOfferRequest $request)
     {
-        $data = $request->only([
-            'offer_type',
-            'describe',
-            'discount_type',
-            'discount',
-            'offer',
-            'product_id',
-        ]);
-        $this->offerRepository->createOffer($data);
+        $this->offerRepository->createOffer($request->all());
         toastr()->success('create Offer Successfully');
         return redirect()->route('offer.index');
     }
