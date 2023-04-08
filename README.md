@@ -41,12 +41,6 @@ install packages and vendor using composer
 comoser update or comoser install
 ```
 
-install packages and vendor using composer
-
-```sh
-comoser update or comoser install
-```
-
 create env file
 
 ```sh
@@ -79,8 +73,6 @@ run project
 ``` 
 [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
 ### why i use Repository Design Pattern 
 
